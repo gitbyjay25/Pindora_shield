@@ -63,12 +63,13 @@ for disease_name in diseases:
 
 print(f"Total records collected: {len(all_data)}")
 
-for i in range(len(all_data)):
-    input_smiles=all_data[i]["smiles"]
-    # results = generator.generate_from_smiles(input_smiles, 5, model_path)
-    # for j, smiles in enumerate(results, 1):
-    #     print(f"{j}. {smiles}")
-    print(f"Generating molecules for input SMILES: {input_smiles}")
+gen_mol=[]
+for i in all_data:
+    input_smiles=i["smiles"]
+    results = generator.generate_from_smiles(input_smiles, 5, model_path)
+    gen_mol.append({"input_smile": input_smiles, "generated_smiles": results})
+    for j, smiles in enumerate(results, 1):
+        print(f"Input SMILES: {input_smiles} -> Generated {j}. {smiles}")
 
-# with open("disease_target_drug_data.json", "w", encoding="utf-8") as f:
-#     json.dump(all_data, f, indent=2)
+with open("generated_molecules.json", "w", encoding="utf-8") as f:
+    json.dump(gen_mol, f, indent=2)
