@@ -329,7 +329,10 @@ def batch_solubility(smiles):
     return vals
 
 # Read synthesizability model
-def readSAModel(filename='SA_score.pkl.gz'):
+def readSAModel(filename=None):
+    if filename is None:
+        # Use relative path from this module
+        filename = os.path.join(os.path.dirname(__file__), 'SA_score.pkl.gz')
     model_data = pickle.load(gzip.open(filename))
     outDict = {}
     for i in model_data:

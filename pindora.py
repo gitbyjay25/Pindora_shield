@@ -17,7 +17,7 @@ all_data = []
 
 for disease_name in diseases:
     efo_ids = data_processor.map_disease_to_efo(disease_name)
-    print(f"Disease: {disease_name} → EFO IDs: {efo_ids}")
+    print(f"Disease: {disease_name} -> EFO IDs: {efo_ids}")
     if not efo_ids:
         print(f"No EFO ID found for disease: {disease_name}")
     for i in efo_ids:
@@ -57,5 +57,7 @@ for disease_name in diseases:
                             row[key] = value
 
                     all_data.append(row)
+                    break
+                break
 
 print(f"Total records collected: {len(all_data)}")

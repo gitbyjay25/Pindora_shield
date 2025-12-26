@@ -75,7 +75,7 @@ class FetchData():
             "entityNames": ["disease"]
         }
         
-        data = query_open_targets(self,query, variables)
+        data = query_open_targets(query, variables)
         efo_ids = []
         
         for mapping in data["data"]["mapIds"]["mappings"]:
@@ -217,12 +217,25 @@ class FetchData():
     # ============================
 
     def get_molecule_properties(self, molecule_chembl_id: str) -> Dict[str, Any]:
-        data = query_chembl(f"molecule/{molecule_chembl_id}")
-        with open(f"{molecule_chembl_id}_raw.json", "w", encoding="utf-8") as f:
-            json.dump(data, f, indent=2)
+        try:
+            data = query_chembl(f"molecule/{molecule_chembl_id}")
+        except Exception as e:
+            print(f"Error fetching molecule {molecule_chembl_id}: {e}")
+            return None
+            
+        if not data:
+            return None
+            
+        # with open(f"{molecule_chembl_id}_raw.json", "w", encoding="utf-8") as f:
+        #     json.dump(data, f, indent=2)
         
         props = data.get("molecule_properties", {})
         structs = data.get("molecule_structures", {})
+        
+        if props is None:
+            props = {}
+        if structs is None:
+            structs = {}
 
         return {
             "chembl_id": data.get("molecule_chembl_id"),
