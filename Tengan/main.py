@@ -10,16 +10,16 @@ import argparse
 import warnings
 import numpy as np 
 import pandas as pd
-from utils import *
+from .utils import *
 from rdkit import Chem
 import pytorch_lightning
 from rdkit import rdBase
-from mol_metrics import *
+from .mol_metrics import *
 from rdkit.Chem import Draw
-from rollout import Rollout, OwnModel
-from discriminator import DiscriminatorModel
-from generator import GeneratorModel, GenSampler
-from data_iter import GenDataLoader, DisDataLoader
+from .rollout import Rollout, OwnModel
+from .discriminator import DiscriminatorModel
+from .generator import GeneratorModel, GenSampler
+from .data_iter import GenDataLoader, DisDataLoader
 rdBase.DisableLog('rdApp.error')
 warnings.filterwarnings("ignore")
 

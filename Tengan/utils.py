@@ -3,7 +3,7 @@ import numpy as np
 matplotlib.use('Agg')
 import seaborn as sns
 from rdkit import Chem
-from mol_metrics import *
+from .mol_metrics import *
 import matplotlib.pyplot as plt
 
 

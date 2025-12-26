@@ -1,7 +1,7 @@
 import torch
 import numpy as np
-from mol_metrics import *
-from generator import PositionalEncoding
+from .mol_metrics import *
+from .generator import PositionalEncoding
 from pytorch_lightning import LightningModule
 
 

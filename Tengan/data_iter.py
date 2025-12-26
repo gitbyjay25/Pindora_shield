@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd 
 from rdkit import Chem
 from rdkit import rdBase
-from mol_metrics import Tokenizer
+from .mol_metrics import Tokenizer
 from torch.utils.data import Dataset, DataLoader
 from pytorch_lightning import LightningDataModule
 rdBase.DisableLog('rdApp.error')

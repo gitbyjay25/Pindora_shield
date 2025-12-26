@@ -3,7 +3,7 @@ import torch
 import numpy as np
 from tqdm import tqdm
 import pytorch_lightning
-from generator import PositionalEncoding
+from .generator import PositionalEncoding
 from pytorch_lightning import LightningModule
 
 

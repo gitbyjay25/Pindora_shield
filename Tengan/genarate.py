@@ -1,6 +1,6 @@
 import torch
-from mol_metrics import Tokenizer
-from generator import GeneratorModel, GenSampler
+from .mol_metrics import Tokenizer
+from .generator import GeneratorModel, GenSampler
 
 # ----------------------------
 # 1. Load Tokenizer
