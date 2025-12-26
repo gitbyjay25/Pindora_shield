@@ -27,20 +27,19 @@ class Pindora:
             print(f"Disease: {disease_name} -> EFO IDs: {efo_ids}")
             if not efo_ids:
                 print(f"No EFO ID found for disease: {disease_name}")
-            for i in efo_ids:
-                targets = self.data_processor.get_associated_targets(i, max_targets=50)
-                all_data = []
-                for i, target in enumerate(targets):
+            for efo_id in efo_ids:
+                targets = self.data_processor.get_associated_targets(efo_id, max_targets=50)
+                for t_idx, target in enumerate(targets):
                     drugs = self.data_processor.get_known_drugs_for_target(target["target_id"], max_drugs=10)
-                    if len(drugs)==0:
+                    if not drugs:
                         continue
                     for j, drug in enumerate(drugs):
                         ic50_data = self.data_processor.get_ic50_data_for_molecule(drug["drug_id"], limit=100)
-                        features = self.data_processor.get_molecule_properties(drug["drug_id"])
+                        features = self.data_processor.get_molecule_properties(drug["drug_id"]) or {}
                         for ic50 in ic50_data:
                             row = {
                                 "disease_name": disease_name,
-                                "efo_id": i,
+                                "efo_id": efo_id,
                                 
                                 # Target information
                                 "target_id": target["target_id"],
@@ -54,10 +53,10 @@ class Pindora:
                                 
                                 # IC50 bioactivity data
                                 "ic50_value": ic50["standard_value"],
-                                "ic50_units": ic50["standard_units"],
-                                "target_chembl_id": ic50["target_chembl_id"],
-                                "assay_chembl_id": ic50["assay_chembl_id"],
-                                "pchembl_value": ic50["pchembl_value"]
+                                "ic50_units": ic50.get("standard_units"),
+                                "target_chembl_id": ic50.get("target_chembl_id"),
+                                "assay_chembl_id": ic50.get("assay_chembl_id"),
+                                "pchembl_value": ic50.get("pchembl_value")
                             }
                             for key, value in features.items():
                                 if key != "molecule_chembl_id" and value is not None:
@@ -111,8 +110,11 @@ class Pindora:
             return {"valid": False}
 
         gen_mol = []
-        for i in all_data:
-            input_smiles = i["smiles"]
+        for rec in all_data:
+            input_smiles = rec.get("smiles")
+            if not input_smiles:
+                # skip records without a canonical SMILES
+                continue
             results = self.generator.generate_from_smiles(input_smiles, 5)
             
             generated_with_props = []
@@ -139,19 +141,20 @@ class Pindora:
                         "properties": props
                     })
                 
-                generated_with_props.append(components)
+                # append enriched component data (was appending raw components before)
+                generated_with_props.append(component_data)
             
             # Only add if there are unique generated molecules
             if generated_with_props:
                 gen_mol.append({
                     "input_smile": input_smiles,
-                    "disease_name": i["disease_name"],
-                    "target_symbol": i["target_symbol"],
-                    "drug_name": i["drug_name"],
+                    "disease_name": rec["disease_name"],
+                    "target_symbol": rec["target_symbol"],
+                    "drug_name": rec["drug_name"],
                     "generated_molecules": generated_with_props
                 })
                 
-                print(f"\nInput: {input_smiles} (Drug: {i['drug_name']})")
+                print(f"\nInput: {input_smiles} (Drug: {rec['drug_name']})")
                 for j, components in enumerate(generated_with_props, 1):
                     print(f"  Generated {j}: {components}")
 
