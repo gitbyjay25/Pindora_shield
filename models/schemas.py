@@ -1,11 +1,12 @@
 from pydantic import BaseModel
-from typing import Optional
+from typing import Optional, List, Dict, Any
 
 class TextInput(BaseModel):
     text: str
     
 class TextResponse(BaseModel):
     input_text: str
+    results: Optional[List[Dict[str, Any]]] = None
     status: str
     message: Optional[str] = None
 

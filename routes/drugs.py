@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException
-from models.schemas import TextInput, TextResponse, HealthCheck, Generate3DInput, Generate3DResponse
+from models.schemas import TextInput, TextResponse, Generate3DInput, Generate3DResponse
 from pindora import Pindora
 from utils.generate_3d import Molecule3DGenerator
 import json
@@ -14,17 +14,16 @@ router = APIRouter(
 async def process_text(request: TextInput):
     if not request.text or len(request.text.strip()) == 0:
         raise HTTPException(status_code=400, detail="Text cannot be empty")
-
+    print("Received text:", request.text)
     Pindora_instance = Pindora()
-    Pindora_instance.drug_discovery_pipeline(request.text)
-    
-    with open("data/generated_molecules_new.json", "r", encoding="utf-8") as f:
-        gen_mol = json.load(f)    
+    mol_gen = Pindora_instance.drug_discovery_pipeline(request.text)
+
 
     return {
         "input_text": request.text,
+        "results": mol_gen,
         "status": "success",
-        "message": f"Drug discovery pipeline completed. Found {len(gen_mol)} molecules."
+        "message": f"Drug discovery pipeline completed. Found {len(mol_gen)} molecules."
     }
 
 @router.post("/generate-3d", response_model=Generate3DResponse)

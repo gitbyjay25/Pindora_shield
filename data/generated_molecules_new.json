@@ -1,671 +1,144 @@
 [
   {
-    "input_smile": "COc1ccc(Cl)cc1C(=O)NCCc1ccc(S(=O)(=O)NC(=O)NC2CCCCC2)cc1",
-    "disease_name": "type 2 diabetes mellitus",
-    "target_symbol": "KCNJ11",
-    "drug_name": "GLYBURIDE",
+    "input_smile": "COc1cc2nc(N3CCN(C(=O)C4COc5ccccc5O4)CC3)nc(N)c2cc1OC.CS(=O)(=O)O",
+    "disease_name": "sinusitis",
+    "target_symbol": "ADRA1A",
+    "drug_name": "DOXAZOSIN MESYLATE",
     "generated_molecules": [
       [
-        "COc1ccc(Cl)cc1C(=O)NCCc1ccc(S(=O)(=O)NC(=O)NC2CCCCC2)cc1"
+        "COc1cc2nc(N3CCN(C(=O)C4COc5ccccc5O4)CC3)nc(N)c2cc1OC.CS(=O)(=O)O"
       ]
     ]
   },
   {
-    "input_smile": "CCc1ccc(CCOc2ccc(CC3SC(=O)NC3=O)cc2)nc1",
-    "disease_name": "type 2 diabetes mellitus",
-    "target_symbol": "PPARG",
-    "drug_name": "PIOGLITAZONE",
+    "input_smile": "COc1cc2nc(N3CCN(C(=O)C4COc5ccccc5O4)CC3)nc(N)c2cc1OC.CS(=O)(=O)O",
+    "disease_name": "sinusitis",
+    "target_symbol": "ADRA1B",
+    "drug_name": "DOXAZOSIN MESYLATE",
     "generated_molecules": [
       [
-        "CCc1ccc(CCOc2ccc(CC3SC(=O)NC3=O)cc2)nc1"
+        "COc1cc2nc(N3CCN(C(=O)C4COc5ccccc5O4)CC3)nc(N)c2cc1OC.CS(=O)(=O)O"
       ]
     ]
   },
   {
-    "input_smile": "CCN(CCCc1ccccc1)CCCc1ccccc1",
-    "disease_name": "type 2 diabetes mellitus",
-    "target_symbol": "HNF4A",
-    "drug_name": "ALVERINE",
+    "input_smile": "CNC(C)(C)Cc1ccccc1",
+    "disease_name": "sinusitis",
+    "target_symbol": "ADRA2B",
+    "drug_name": "MEPHENTERMINE",
     "generated_molecules": [
       [
-        "CCN(CCCc1ccccc1)CCCc1ccccc1"
+        "CNC(C)(C)Cc1ccccc1"
       ]
     ]
   },
   {
-    "input_smile": "CC(C)NC[C@@H](C(=O)N1CCN(c2ncnc3c2[C@H](C)C[C@H]3O)CC1)c1ccc(Cl)cc1",
-    "disease_name": "type 2 diabetes mellitus",
-    "target_symbol": "AKT2",
-    "drug_name": "IPATASERTIB",
+    "input_smile": "CC(COc1ccccc1)N(CCCl)Cc1ccccc1.Cl",
+    "disease_name": "sinusitis",
+    "target_symbol": "ADRA2A",
+    "drug_name": "PHENOXYBENZAMINE HYDROCHLORIDE",
     "generated_molecules": [
       [
-        "CC(C)NC[C@@H](C(=O)N1CCN(c2ncnc3c2[C@H](C)C[C@H]3O)CC1)c1ccc(Cl)cc1"
+        "CC(COc1ccccc1)N(CCCl)Cc1ccccc1.Cl"
       ]
     ]
   },
   {
-    "input_smile": "CN(C)C(=N)NC(=N)N.Cl",
-    "disease_name": "type 2 diabetes mellitus",
-    "target_symbol": "GPD2",
-    "drug_name": "METFORMIN HYDROCHLORIDE",
+    "input_smile": "CS(=O)(=O)O.Cc1ccc(N(CC2=NCCN2)c2cccc(O)c2)cc1",
+    "disease_name": "sinusitis",
+    "target_symbol": "ADRA2C",
+    "drug_name": "PHENTOLAMINE MESYLATE",
     "generated_molecules": [
       [
-        "CN(C)C(=N)NC(=N)N.Cl"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N.Cl",
-        "CCc1nc2c(cccc2)n1"
+        "CS(=O)(=O)O.Cc1ccc(N(CC2=NCCN2)c2cccc(O)c2)cc1"
       ]
     ]
   },
   {
-    "input_smile": "CN(C)C(=N)NC(=N)N",
-    "disease_name": "type 2 diabetes mellitus",
-    "target_symbol": "NDUFS4",
-    "drug_name": "METFORMIN",
+    "input_smile": "CNC(C)(C)Cc1ccccc1",
+    "disease_name": "sinusitis",
+    "target_symbol": "ADRB1",
+    "drug_name": "MEPHENTERMINE",
     "generated_molecules": [
       [
-        "CN(C)C(=N)NC(=N)N",
-        "C(CNC(C)(C)C)=O"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "CC(=O)COC(=O)c1ccc(F)cc1Br"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "CC(C)(C)C)Cc1ncc(Cl)c1"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "CC(=O)c1ccc(F)cc1"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "c1cc(Br)c(OCC)c(OC)c1"
+        "CNC(C)(C)Cc1ccccc1"
       ]
     ]
   },
   {
-    "input_smile": "CN(C)C(=N)NC(=N)N.Cl",
-    "disease_name": "type 2 diabetes mellitus",
-    "target_symbol": "MT-ND1",
-    "drug_name": "METFORMIN HYDROCHLORIDE",
+    "input_smile": "CNC(C)(C)Cc1ccccc1",
+    "disease_name": "sinusitis",
+    "target_symbol": "ADRB3",
+    "drug_name": "MEPHENTERMINE",
     "generated_molecules": [
       [
-        "CN(C)C(=N)NC(=N)N.Cl"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N.Cl",
-        "Cc1nc2ccccc2s1"
+        "CNC(C)(C)Cc1ccccc1"
       ]
     ]
   },
   {
-    "input_smile": "CC(C)(C)OC[C@@H]1C(=O)NCCN1C(=O)C[C@H](N)Cc1cc(F)c(F)cc1F",
-    "disease_name": "type 2 diabetes mellitus",
-    "target_symbol": "DPP4",
-    "drug_name": "EVOGLIPTIN",
+    "input_smile": "CC(CN1c2ccccc2Sc2ccccc21)N(C)C.Cl",
+    "disease_name": "sinusitis",
+    "target_symbol": "HRH1",
+    "drug_name": "PROMETHAZINE HYDROCHLORIDE",
     "generated_molecules": [
       [
-        "CC(C)(C)OC[C@@H]1C(=O)NCCN1C(=O)C[C@H](N)Cc1cc(F)c(F)cc1F"
+        "CC(CN1c2ccccc2Sc2ccccc21)N(C)C.Cl"
       ]
     ]
   },
   {
-    "input_smile": "CN(C)C(=N)NC(=N)N",
-    "disease_name": "type 2 diabetes mellitus",
-    "target_symbol": "NDUFS3",
-    "drug_name": "METFORMIN",
+    "input_smile": "CCNC(C)Cc1cccc(C(F)(F)F)c1",
+    "disease_name": "sinusitis",
+    "target_symbol": "SIGMAR1",
+    "drug_name": "FENFLURAMINE",
     "generated_molecules": [
       [
-        "CN(C)C(=N)NC(=N)N",
-        "[C@@H](C(=O)Nc1ncc(C(C)C)s1)C"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "CC#C(C(F)(F)F)(C(F)(F)F)C"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "CCc1ccc(OC)cc1"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "C(CSc1c(Cl)nnc2c1cccc2)=O"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "CCC#N)c1ccc(OCC)cc1"
+        "CCNC(C)Cc1cccc(C(F)(F)F)c1"
       ]
     ]
   },
   {
-    "input_smile": "OC[C@H]1O[C@@H](c2ccc(F)c(Cc3cc4ccccc4s3)c2)[C@H](O)[C@@H](O)[C@@H]1O",
-    "disease_name": "type 2 diabetes mellitus",
-    "target_symbol": "SLC5A2",
-    "drug_name": "IPRAGLIFLOZIN",
+    "input_smile": "CN(C)CCC=C1c2ccccc2COc2ccccc21.Cl",
+    "disease_name": "sinusitis",
+    "target_symbol": "SLC6A2",
+    "drug_name": "DOXEPIN HYDROCHLORIDE",
     "generated_molecules": [
       [
-        "OC[C@H]1O[C@@H](c2ccc(F)c(Cc3cc4ccccc4s3)c2)[C@H](O)[C@@H](O)[C@@H]1O"
+        "CN(C)CCC=C1c2ccccc2COc2ccccc21.Cl"
       ]
     ]
   },
   {
-    "input_smile": "CN(C)C(=N)NC(=N)N",
-    "disease_name": "type 2 diabetes mellitus",
-    "target_symbol": "NDUFB8",
-    "drug_name": "METFORMIN",
+    "input_smile": "Cl.NC12CC3CC(CC(C3)C1)C2",
+    "disease_name": "sinusitis",
+    "target_symbol": "GRIN2A",
+    "drug_name": "AMANTADINE HYDROCHLORIDE",
     "generated_molecules": [
       [
-        "CN(C)C(=N)NC(=N)N"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "C(Cc1c(Cl)cc(Cl)cc1)=O"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "Cc1ccccc1Cl"
+        "Cl.NC12CC3CC(CC(C3)C1)C2"
       ]
     ]
   },
   {
-    "input_smile": "Cc1ccc(C)c(OCCCC(C)(C)C(=O)O)c1",
-    "disease_name": "type 2 diabetes mellitus",
-    "target_symbol": "PPARA",
-    "drug_name": "GEMFIBROZIL",
+    "input_smile": "CC(C)Nc1cc(-c2c[nH]c(C(=O)N[C@H](CO)c3cccc(Cl)c3)c2)c(Cl)cn1",
+    "disease_name": "sinusitis",
+    "target_symbol": "MAPK3",
+    "drug_name": "ULIXERTINIB",
     "generated_molecules": [
       [
-        "Cc1ccc(C)c(OCCCC(C)(C)C(=O)O)c1"
+        "CC(C)Nc1cc(-c2c[nH]c(C(=O)N[C@H](CO)c3cccc(Cl)c3)c2)c(Cl)cn1"
       ]
     ]
   },
   {
-    "input_smile": "CCOC(=O)Nc1ccc(NCc2ccc(F)cc2)cc1N",
-    "disease_name": "type 2 diabetes mellitus",
-    "target_symbol": "KCNQ1",
-    "drug_name": "EZOGABINE",
+    "input_smile": "CCCNCC(O)COc1ccccc1C(=O)CCc1ccccc1.Cl",
+    "disease_name": "sinusitis",
+    "target_symbol": "SCN4A",
+    "drug_name": "PROPAFENONE HYDROCHLORIDE",
     "generated_molecules": [
       [
-        "CCOC(=O)Nc1ccc(NCc2ccc(F)cc2)cc1N"
-      ]
-    ]
-  },
-  {
-    "input_smile": "CN(C)C(=N)NC(=N)N",
-    "disease_name": "type 2 diabetes mellitus",
-    "target_symbol": "NDUFA13",
-    "drug_name": "METFORMIN",
-    "generated_molecules": [
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "Cc1cc(OCC)c(OC)cc1"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "c1ccc(Br)cc1Br"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "[C@@H](C)CC(NC1CCCCC1)=O"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "C(CSc1c2c([nH]c(=O)cc2)cccc1)C"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "[C@H](CC)C(=O)[O-])Cc1ccccc1"
-      ]
-    ]
-  },
-  {
-    "input_smile": "CN(C)C(=N)NC(=N)N.Cl",
-    "disease_name": "type 2 diabetes mellitus",
-    "target_symbol": "NDUFB6",
-    "drug_name": "METFORMIN HYDROCHLORIDE",
-    "generated_molecules": [
-      [
-        "CN(C)C(=N)NC(=N)N.Cl"
-      ]
-    ]
-  },
-  {
-    "input_smile": "CN(C)C(=N)NC(=N)N.Cl",
-    "disease_name": "type 2 diabetes mellitus",
-    "target_symbol": "MT-ND6",
-    "drug_name": "METFORMIN HYDROCHLORIDE",
-    "generated_molecules": [
-      [
-        "CN(C)C(=N)NC(=N)N.Cl"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N.Cl",
-        ")Cc1cc(OCC)ccc1Br"
-      ]
-    ]
-  },
-  {
-    "input_smile": "CN(C)C(=N)NC(=N)N",
-    "disease_name": "type 2 diabetes mellitus",
-    "target_symbol": "NDUFB2",
-    "drug_name": "METFORMIN",
-    "generated_molecules": [
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "C(CC(=O)NCCCC)(=O)c1ccccc1"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "CC(CC)C(=O)OC)c1ccc(Cl)cc1"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "C(C#N)Cc1ccccc1"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "CCC)C(CCSc1ccccc1"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "[C@@H](CC(C)C)C(=O)OCC)C(C)C"
-      ]
-    ]
-  },
-  {
-    "input_smile": "CN(C)C(=N)NC(=N)N.Cl",
-    "disease_name": "type 2 diabetes mellitus",
-    "target_symbol": "NDUFA5",
-    "drug_name": "METFORMIN HYDROCHLORIDE",
-    "generated_molecules": [
-      [
-        "CN(C)C(=N)NC(=N)N.Cl",
-        "c1ccc(NC(C)=O)cc1"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N.Cl",
-        "c1ccc(C(F)(F)F)cc1"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N.Cl"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N.Cl",
-        "c1ccc(C(OC)=O)cc1"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N.Cl",
-        "CCc1ccc(C(OC)=O)cc1"
-      ]
-    ]
-  },
-  {
-    "input_smile": "CN(C)C(=N)NC(=N)N",
-    "disease_name": "type 2 diabetes mellitus",
-    "target_symbol": "NDUFC2",
-    "drug_name": "METFORMIN",
-    "generated_molecules": [
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "Cc1ccncc1Br"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "CCS(=O)(=O)c1ccc(Cl)cc1"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "[C@H](C)C(=O)Nc1ccccc1"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N"
-      ]
-    ]
-  },
-  {
-    "input_smile": "CN(C)C(=N)NC(=N)N",
-    "disease_name": "type 2 diabetes mellitus",
-    "target_symbol": "NDUFAB1",
-    "drug_name": "METFORMIN",
-    "generated_molecules": [
-      [
-        "CN(C)C(=N)NC(=N)N"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "Cc1ccccc1OC"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "c1ccc(Br)cc1Cl"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "CCCC1=O)CCn1cc(Cl)c(Cl)c1"
-      ]
-    ]
-  },
-  {
-    "input_smile": "CN(C)C(=N)NC(=N)N.Cl",
-    "disease_name": "type 2 diabetes mellitus",
-    "target_symbol": "MT-ND2",
-    "drug_name": "METFORMIN HYDROCHLORIDE",
-    "generated_molecules": [
-      [
-        "CN(C)C(=N)NC(=N)N.Cl"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N.Cl",
-        "C(=O)COc1ccc(C(C)(C)C)cc1"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N.Cl",
-        "(C)C"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N.Cl",
-        "S(=O)(c1ccc(Cl)c(Cl)c1)=O"
-      ]
-    ]
-  },
-  {
-    "input_smile": "CN(C)C(=N)NC(=N)N.Cl",
-    "disease_name": "type 2 diabetes mellitus",
-    "target_symbol": "NDUFAF3",
-    "drug_name": "METFORMIN HYDROCHLORIDE",
-    "generated_molecules": [
-      [
-        "CN(C)C(=N)NC(=N)N.Cl"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N.Cl",
-        "Cc1cccc(Cl)c1Cl"
-      ]
-    ]
-  },
-  {
-    "input_smile": "CN(C)C(=N)NC(=N)N",
-    "disease_name": "type 2 diabetes mellitus",
-    "target_symbol": "MT-ND4",
-    "drug_name": "METFORMIN",
-    "generated_molecules": [
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "CC(=O)OCc1ccccc1"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "[C@@H](C)C(=O)OCc1ccc(F)cc1Cl"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "CC[N-]C(CC)(C)C"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "[C@@H](C(=O)[O-])CC(C)C"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "S(c1ccc(Cl)cc1Cl)(=O)c1ccccc1"
-      ]
-    ]
-  },
-  {
-    "input_smile": "CN(C)C(=N)NC(=N)N",
-    "disease_name": "type 2 diabetes mellitus",
-    "target_symbol": "MT-ND4L",
-    "drug_name": "METFORMIN",
-    "generated_molecules": [
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "Cc1ccnc1"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "[C@@H](C(=O)NC1CCCCC1)C"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "CCc1ccccc1OC"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "C(CSc1cc(Cl)cc(Cl)c1)=O"
-      ]
-    ]
-  },
-  {
-    "input_smile": "CN(C)C(=N)NC(=N)N.Cl",
-    "disease_name": "type 2 diabetes mellitus",
-    "target_symbol": "NDUFA10",
-    "drug_name": "METFORMIN HYDROCHLORIDE",
-    "generated_molecules": [
-      [
-        "CN(C)C(=N)NC(=N)N.Cl"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N.Cl",
-        "CCc1ccc(Cl)cc1"
-      ]
-    ]
-  },
-  {
-    "input_smile": "CN(C)C(=N)NC(=N)N.Cl",
-    "disease_name": "type 2 diabetes mellitus",
-    "target_symbol": "MT-ND5",
-    "drug_name": "METFORMIN HYDROCHLORIDE",
-    "generated_molecules": [
-      [
-        "CN(C)C(=N)NC(=N)N.Cl"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N.Cl",
-        "CS(=O)(=O)c1ccc(Cl)cc1"
-      ]
-    ]
-  },
-  {
-    "input_smile": "CN(C)C(=N)NC(=N)N",
-    "disease_name": "type 2 diabetes mellitus",
-    "target_symbol": "NDUFA1",
-    "drug_name": "METFORMIN",
-    "generated_molecules": [
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "CC(C)(C)C)C(=O)c1occc1"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "[C@@H](C(=O)NCc1occc1)C"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "CCc1ccc(OC)cc1"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "[C@H](CC(Cl)(Cl)Cl)C(C)=O"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "Cc1c(C(F)(F)F)cnn1"
-      ]
-    ]
-  },
-  {
-    "input_smile": "CN(C)C(=N)NC(=N)N",
-    "disease_name": "type 2 diabetes mellitus",
-    "target_symbol": "NDUFA2",
-    "drug_name": "METFORMIN",
-    "generated_molecules": [
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "[C@H](C)C(C)C)C(=O)[C@@H](C)C"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "c1cc(Br)cc(Cl)c1"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "C(CNC(Cc1ccc(Cl)cc1)=O)CC"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "Cc1ccc(OC)cc1"
-      ]
-    ]
-  },
-  {
-    "input_smile": "CN(C)C(=N)NC(=N)N",
-    "disease_name": "type 2 diabetes mellitus",
-    "target_symbol": "NDUFS1",
-    "drug_name": "METFORMIN",
-    "generated_molecules": [
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "CCc1ccc(OC)cc1"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "Cc1ccccn1"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "[C@H](C)C(Nc1ccc(C(F)(F)F)cc1)=O"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "[C@H](CC)C(=O)NCc1ccc(Cl)cc1"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "c1c(C(OC)=O)c2c(cccc2)cc1"
-      ]
-    ]
-  },
-  {
-    "input_smile": "CN(C)C(=N)NC(=N)N",
-    "disease_name": "type 2 diabetes mellitus",
-    "target_symbol": "MT-ND3",
-    "drug_name": "METFORMIN",
-    "generated_molecules": [
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "[C@H](C(=O)OC)c1ccccc1"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "CC(COc1c(Cl)cc(Cl)cc1)=O"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "Cc1ccccc1Cl"
-      ]
-    ]
-  },
-  {
-    "input_smile": "CN(C)C(=N)NC(=N)N",
-    "disease_name": "type 2 diabetes mellitus",
-    "target_symbol": "NDUFA12",
-    "drug_name": "METFORMIN",
-    "generated_molecules": [
-      [
-        "CN(C)C(=N)NC(=N)N"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "C(CCC)C(=O)Cc1ccc(Cl)cc1"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "[C@H](CC)C(=O)Nc1ccc(Cl)c(Cl)c1"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "Cc1cc(Cl)c(F)cc1"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "CS(=O)(c1ccc(F)cc1)=O"
-      ]
-    ]
-  },
-  {
-    "input_smile": "CN(C)C(=N)NC(=N)N",
-    "disease_name": "type 2 diabetes mellitus",
-    "target_symbol": "NDUFB7",
-    "drug_name": "METFORMIN",
-    "generated_molecules": [
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "[C@@H]1CCCO1=O"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "CC(C)(C)C)c1ccccc1"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "Cc1ccccc1NC(Cc1ccccc1)=O"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "CCl)c1cc(C(OC)=O)ccc1"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N"
-      ]
-    ]
-  },
-  {
-    "input_smile": "CN(C)C(=N)NC(=N)N.Cl",
-    "disease_name": "type 2 diabetes mellitus",
-    "target_symbol": "NDUFV1",
-    "drug_name": "METFORMIN HYDROCHLORIDE",
-    "generated_molecules": [
-      [
-        "CN(C)C(=N)NC(=N)N.Cl"
-      ]
-    ]
-  },
-  {
-    "input_smile": "CN(C)C(=N)NC(=N)N",
-    "disease_name": "type 2 diabetes mellitus",
-    "target_symbol": "COXFA4",
-    "drug_name": "METFORMIN",
-    "generated_molecules": [
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "C(CCc1c2c(cccc2)c(Cl)c1)=O"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "c1ccc(OCC)cc1"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "c1cc(Cl)c(Cl)cc1"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "(CCc1ccccc1OC)C"
-      ],
-      [
-        "CN(C)C(=N)NC(=N)N",
-        "Cc1cc(OCC)ccc1"
+        "CCCNCC(O)COc1ccccc1C(=O)CCc1ccccc1.Cl"
       ]
     ]
   }
