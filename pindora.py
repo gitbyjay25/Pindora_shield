@@ -66,7 +66,7 @@ print(f"Total records collected: {len(all_data)}")
 gen_mol=[]
 for i in all_data:
     input_smiles=i["smiles"]
-    results = generator.generate_from_smiles(input_smiles, 5, model_path)
+    results = generator.generate_from_smiles(input_smiles, 5)
     gen_mol.append({"input_smile": input_smiles, "generated_smiles": results})
     for j, smiles in enumerate(results, 1):
         print(f"Input SMILES: {input_smiles} -> Generated {j}. {smiles}")
