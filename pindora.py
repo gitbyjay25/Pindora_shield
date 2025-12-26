@@ -3,13 +3,14 @@ from fetch_data import FetchData
 from copilot import AzureOpenAIChatClient
 import json
 
-def generate_molecules( max_len: int = 120, num_samples: int = 1):
-    generator = MoleculeGenerator(max_len=max_len)
-    molecules = generator.generate(num_samples=num_samples)
-    return molecules
-
 data_processor = FetchData()
 copilot=AzureOpenAIChatClient()
+model_path = "Tengan/res/save_models/ZINC/TenGAN_0.5/rollout_8/batch_64/druglikeness/g_pretrained.pkl"
+generator = MoleculeGenerator(
+    model_path=model_path,
+    batch_size=8,
+    max_len=120
+)
 
 disease_c=copilot.generate_desease_name_from_prompt("i have breast cancer and diabetes type 2")
 diseases=json.loads(disease_c)["desease"]
@@ -61,3 +62,13 @@ for disease_name in diseases:
                 break
 
 print(f"Total records collected: {len(all_data)}")
+
+for i in range(len(all_data)):
+    input_smiles=all_data[i]["smiles"]
+    # results = generator.generate_from_smiles(input_smiles, 5, model_path)
+    # for j, smiles in enumerate(results, 1):
+    #     print(f"{j}. {smiles}")
+    print(f"Generating molecules for input SMILES: {input_smiles}")
+
+# with open("disease_target_drug_data.json", "w", encoding="utf-8") as f:
+#     json.dump(all_data, f, indent=2)
