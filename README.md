@@ -66,9 +66,9 @@ Step 6: Comparative Analysis & Ranking
 Shortlisted candidates are compared with existing medicines, and a ranked comparative analysis is produced to support research-level decision making.
 
 ## Round 2 Vision : 
-1- Improving the accuracy of all five predictive models
-2-Introducing an orchestrator for efficient job scheduling and batch evaluation
-3-Adding automated report generation for research-ready outputs
+1- Improving the accuracy of all five predictive models.
+2-Introducing an orchestrator for efficient job scheduling and batch evaluation.
+3-Adding automated report generation for research-ready outputs.
 
 These enhancements will strengthen performance and enable scalable, system-level deployment.
 
