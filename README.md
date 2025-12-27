@@ -30,3 +30,4 @@ The proposed system operates in four major stages:
 4 -> Comparative Evaluation & Optimization
 
 Each stage is designed to reduce manual intervention while ensuring chemical validity, diversity, and optimization across multiple drug-relevant properties.
+![Worlflow](image-1.png)
