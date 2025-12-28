@@ -1,4 +1,5 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+
 
 type Molecule = {
   smiles: string;
@@ -22,6 +23,38 @@ type ResultItem = {
 
 export default function ResultPage({ results }: { results: ResultItem[] }) {
   const topRef = useRef<HTMLDivElement | null>(null);
+
+  const [metrics, setMetrics] = useState<any | null>(null);
+  const [activeSmile, setActiveSmile] = useState<string | null>(null);
+  const [isMetricsLoading, setIsMetricsLoading] = useState(false);
+
+
+  const fetchMetrics = async (smile: string) => {
+  try {
+    setActiveSmile(smile);        // jis SMILES pe click hua
+    setMetrics(null);             // purana data hatao
+    setIsMetricsLoading(true);
+
+    const res = await fetch(
+      "http://4.240.107.18/metrics/metrics_data"
+,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ input_smile: smile }),
+      }
+    );
+
+    const data = await res.json();
+    setMetrics(data);
+  } catch (err) {
+    console.error("Metrics API error:", err);
+  } finally {
+    setIsMetricsLoading(false);
+  }
+};
+
+
 
   useEffect(() => {
     if (topRef.current) {
@@ -115,9 +148,26 @@ export default function ResultPage({ results }: { results: ResultItem[] }) {
                   <div>Aromatic Rings: {mol.properties.aromatic_rings}</div>
                 </div>
 
-                <div className="smiles">
+                <div
+                  className="smiles"
+                  style={{ cursor: "pointer" }}
+                  onClick={() => fetchMetrics(mol.smiles)}
+                >
                   SMILES: {mol.smiles}
                 </div>
+                
+                {activeSmile === mol.smiles && (
+                  <div className="props" style={{ marginTop: "16px" }}>
+                    {isMetricsLoading ? (
+                      <div>Analyzing selected molecule…</div>
+                    ) : metrics ? (
+                      <pre style={{ fontSize: "12px", whiteSpace: "pre-wrap" }}>
+                        {JSON.stringify(metrics, null, 2)}
+                      </pre>
+                    ) : null}
+                  </div>
+                )}
+
               </>
             )}
           </div>
