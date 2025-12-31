@@ -19,8 +19,29 @@ Existing computational tools for molecular generation and optimization often suf
 - Researchers struggle to generate diverse, optimized, chemically valid molecules quickly, as models often produce invalid structures, fail synthesizability checks, or overlook multi-property optimization in practical drug pipelines.
 ([ICLR Conference -openreview.org](https://openreview.net/forum?id=f43lpq1Q8i))
 
- ![Mechanism](image.png)
+#**Disease–Protein Interaction Network** : Diseases are driven by complex biological networks, not isolated proteins.
+- A single disease can involve multiple protein–protein interactions, feedback loops, and pathways.
+- Targeting one protein can influence several downstream biological effects.
+- Motivation: Our system starts by identifying relevant target proteins associated with the disease before molecule generation
 
+**This justifies why target identification is a critical first step in our workflow.**
+ ![Mechanism](image.png)
+** Lead Optimization via Molecular Variants **
+- In real-world drug discovery, a single lead molecule is rarely optimal.
+- Chemists generate multiple structural analogs of a lead compound.
+- Each analog can show drastically different potency (µM → nM).
+- Motivation: Instead of manually creating analogs, our system automatically
+
+**This motivates our TangGen-based alternative SMILES generation stage**
+![wf](image-2.png)
+#** Target Mechanism** : 
+- Diseases often arise from enzyme-catalyzed reactions (rate-limiting steps).
+- Inhibiting a specific enzyme can block disease progression (e.g., aromatase → estrogen → breast tumor)
+- Effective drugs must:
+- Bind the target enzyme
+- Reduce reaction rateMaintain chemical feasibility
+**Motivation**: Generated molecules must be evaluated not just structurally, but pharmacologically.
+**This motivates multi-factor evaluation (IC50, association score, phase, target relevance**
 ## Overview :
 The proposed system operates in four major stages:
 
@@ -31,8 +52,8 @@ The proposed system operates in four major stages:
 
 Each stage is designed to reduce manual intervention while ensuring chemical validity, diversity, and optimization across multiple drug-relevant properties.
 ![Worlflow](flow.png)
-![wf](image-2.png)
-## Work FLow 
+
+## **Work FLow **
 Pindora Shield follows a structured pipeline where disease-specific molecular candidates are generated and evaluated across multiple drug-relevant dimensions.
 
 Step 1: Disease Context & Target Identification
@@ -71,6 +92,10 @@ Shortlisted candidates are compared with existing medicines, and a ranked compar
 2-Introducing an orchestrator for efficient job scheduling and batch evaluation.
 3-Adding automated report generation for research-ready outputs.
 
+**Dataset & Inputs**
+- Public biomedical datasets (e.g., ChEMBL, Open Targets) used for disease–target and drug information
+- Molecular data represented using SMILES strings with curated physicochemical descriptors
+- Dataset cleaned, deduplicated, and structured for training multiple predictive models
 These enhancements will strengthen performance and enable scalable, system-level deployment.
 
 
