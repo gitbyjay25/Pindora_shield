@@ -20,7 +20,7 @@ export default function Home() {
     setResults(null);
 
     try {
-      const res = await fetch("http://4.240.107.18/api/drug_discovery", {
+      const res = await fetch("/api/api/drug_discovery", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
