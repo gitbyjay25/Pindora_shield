@@ -42,7 +42,7 @@ export default function ResultPage({ results }: { results: ResultItem[] }) {
     setIsMetricsLoading(true);
 
     const res = await fetch(
-      "http://4.240.107.18/metrics/metrics_data"
+      "/api/metrics/metrics_data"
 ,
       {
         method: "POST",
