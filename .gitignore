@@ -3,3 +3,24 @@ env
 __pycache__/
 catboost_info/
 Pindora.pem
+# IDEs
+.idea/
+.vscode/
+
+# macOS
+.DS_Store
+
+# Frontend env files
+frontend/.env
+frontend/.env.development
+frontend/.env.production
+frontend/.env.staging
+
+# Node / build
+node_modules/
+dist/
+build/
+
+# Local env files
+.env.local
+*.local

@@ -17,19 +17,33 @@ async def process_text(request: TextInput):
     print("Received text:", request.text)
     with open("data/status.json", "w") as f:
         json.dump({"status": "Molecules Generation in Progress"}, f)
-    
-    Pindora_instance = Pindora()
-    mol_gen = Pindora_instance.drug_discovery_pipeline(request.text)
 
-    with open("data/status.json", "w") as f:
-        json.dump({"status": "Molecules Generation Completed"}, f)
+    try:
+        Pindora_instance = Pindora()
+        mol_gen = Pindora_instance.drug_discovery_pipeline(request.text)
 
-    return {
-        "input_text": request.text,
-        "results": mol_gen,
-        "status": "success",
-        "message": f"Drug discovery pipeline completed. Found {len(mol_gen)} molecules."
-    }
+        with open("data/status.json", "w") as f:
+            json.dump({"status": "Molecules Generation Completed"}, f)
+
+        return {
+            "input_text": request.text,
+            "results": mol_gen,
+            "status": "success",
+            "message": f"Drug discovery pipeline completed. Found {len(mol_gen)} molecules."
+        }
+    except Exception as e:
+        import traceback, os
+        tb = traceback.format_exc()
+        # Write failure status
+        with open("data/status.json", "w") as f:
+            json.dump({"status": "Molecules are not Generating", "error": str(e)}, f)
+
+        # Return a structured JSON error so frontend always receives JSON
+        from fastapi.responses import JSONResponse
+        if os.getenv("ENV", "development") != "production":
+            return JSONResponse(status_code=500, content={"status": "error", "message": str(e), "detail": tb})
+        else:
+            return JSONResponse(status_code=500, content={"status": "error", "message": "Internal server error"})
 
 @router.post("/generate-3d", response_model=Generate3DResponse)
 async def generate_3d_endpoint(request: Generate3DInput):
