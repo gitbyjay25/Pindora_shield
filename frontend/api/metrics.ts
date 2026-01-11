@@ -9,8 +9,10 @@ export default async function handler(req: Request): Promise<Response> {
   try {
     const body = await req.text();
 
+    const API_BASE = (process.env.VITE_API_URL as string) || ((typeof import !== 'undefined' && (import.meta as any)?.env?.VITE_API_URL) as string) || 'http://127.0.0.1:8000';
+
     const backendRes = await fetch(
-      "http://4.240.107.18/api/metrics/metrics_data",
+      `${API_BASE}/api/metrics/metrics_data`,
       {
         method: "POST",
         headers: {

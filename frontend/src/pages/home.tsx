@@ -20,7 +20,7 @@ export default function Home() {
     setResults(null);
 
     try {
-      const res = await fetch("/api/drug_discovery", {
+      const res = await fetch("http://4.240.107.18/api/drug_discovery", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -37,11 +37,18 @@ export default function Home() {
         json = JSON.parse(text);
       } catch {
         console.error("Non-JSON response from backend:", text);
-        throw new Error("Backend returned invalid JSON");
+        // Include server text in error so it's easier to debug
+        throw new Error("Backend returned invalid JSON: " + (text ? text.slice(0, 500) : "(empty response)"));
+      }
+
+      if (!res.ok) {
+        // If server returned structured JSON error include that message
+        const errMsg = (json && (json.message || json.detail || JSON.stringify(json))) || text;
+        throw new Error(errMsg);
       }
 
       if (!Array.isArray(json.results)) {
-        throw new Error("Unexpected response format");
+        throw new Error("Unexpected response format: 'results' missing or not an array");
       }
 
       setResults(json.results);
