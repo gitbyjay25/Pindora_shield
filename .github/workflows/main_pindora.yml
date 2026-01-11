@@ -25,6 +25,8 @@ jobs:
 
       - name: npm install, build, and test
         working-directory: ./frontend
+        env:
+          VITE_API_URL: https://api.stat-vision.xyz
         run: |
           npm install
           npm run build --if-present

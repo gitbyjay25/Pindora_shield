@@ -21,7 +21,10 @@ export default function Home() {
     setResults(null);
 
     try {
-      const res = await fetch(getApiUrl("/api/drug_discovery"), {
+      const apiUrl = getApiUrl("/api/drug_discovery");
+      console.log("Making API request to:", apiUrl);
+      
+      const res = await fetch(apiUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

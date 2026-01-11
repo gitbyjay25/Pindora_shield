@@ -1,4 +1,7 @@
+// Try to get API URL from environment, with fallback
 export const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://api.stat-vision.xyz';
+
+console.log('API Base URL configured as:', API_BASE_URL);
 
 export const getApiUrl = (endpoint: string): string => {
   const cleanEndpoint = endpoint.startsWith('/') ? endpoint.slice(1) : endpoint;
