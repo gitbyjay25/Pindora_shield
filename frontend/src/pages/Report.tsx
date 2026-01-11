@@ -4,6 +4,7 @@ import remarkMath from "remark-math";
 import remarkGfm from "remark-gfm";
 import rehypeKatex from "rehype-katex";
 import "katex/dist/katex.min.css";
+import { getApiUrl } from "../config/api";
 
 interface ReportProps {
   smiles: string;
@@ -37,7 +38,7 @@ export default function ReportModal({ smiles, onClose }: ReportProps) {
       setLoading(true);
       setError(null);
 
-      const res = await fetch("http://4.240.107.18/metrics/metrics_data", {
+      const res = await fetch(getApiUrl("/metrics/metrics_data"), {
         method: "POST",
         headers: {
           "accept": "application/json",

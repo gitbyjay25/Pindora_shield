@@ -9,7 +9,7 @@ export default async function handler(req: Request): Promise<Response> {
   try {
     const body = await req.text();
 
-    const API_BASE = (process.env.VITE_API_URL as string) || ((typeof import !== 'undefined' && (import.meta as any)?.env?.VITE_API_URL) as string) || 'http://127.0.0.1:8000';
+    const API_BASE = 'https://api.stat-vision.xyz';
 
     const backendRes = await fetch(
       `${API_BASE}/api/metrics/metrics_data`,

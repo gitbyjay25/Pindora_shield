@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Search, ChevronRight } from "lucide-react";
 import Loading from "./loading";
 import ResultPage from "./ResultPage";
+import { getApiUrl } from "../config/api";
 
 export default function Home() {
   const [prompt, setPrompt] = useState("");
@@ -20,7 +21,7 @@ export default function Home() {
     setResults(null);
 
     try {
-      const res = await fetch("http://4.240.107.18/api/drug_discovery", {
+      const res = await fetch(getApiUrl("/api/drug_discovery"), {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
