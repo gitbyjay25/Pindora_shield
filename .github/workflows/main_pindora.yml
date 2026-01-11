@@ -30,11 +30,19 @@ jobs:
           npm run build --if-present
           npm run test --if-present
 
+      - name: Prepare deployment package
+        run: |
+          mkdir -p deploy
+          cp -r frontend/dist deploy/dist
+          cp frontend/server.js deploy/
+          cp frontend/package.json deploy/
+          cp frontend/web.config deploy/
+
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: node-app
-          path: ./frontend/dist
+          path: deploy
 
   deploy:
     runs-on: ubuntu-latest
