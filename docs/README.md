@@ -32,7 +32,7 @@ Check out idea overview video!
 - Motivation: Our system starts by identifying relevant target proteins associated with the disease before molecule generation
 
 **This justifies why target identification is a critical first step in our workflow.**
- ![Mechanism](image.png)
+ ![Mechanism](../image.png)
 ** Lead Optimization via Molecular Variants **
 - In real-world drug discovery, a single lead molecule is rarely optimal.
 - Chemists generate multiple structural analogs of a lead compound.
@@ -40,7 +40,7 @@ Check out idea overview video!
 - Motivation: Instead of manually creating analogs, our system automatically
 
 **This motivates our TangGen-based alternative SMILES generation stage**
-![wf](image-2.png)
+![wf](../image-2.png)
 #** Target Mechanism** : 
 - Diseases often arise from enzyme-catalyzed reactions (rate-limiting steps).
 - Inhibiting a specific enzyme can block disease progression (e.g., aromatase → estrogen → breast tumor)
@@ -58,7 +58,7 @@ The proposed system operates in four major stages:
 4 -> Comparative Evaluation & Optimization
 
 Each stage is designed to reduce manual intervention while ensuring chemical validity, diversity, and optimization across multiple drug-relevant properties.
-![Worlflow](flow.png)
+![Worlflow](../flow.png)
 
 ## **Work FLow **
 Pindora Shield follows a structured pipeline where disease-specific molecular candidates are generated and evaluated across multiple drug-relevant dimensions.
