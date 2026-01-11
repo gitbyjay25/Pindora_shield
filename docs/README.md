@@ -92,10 +92,27 @@ Predicted outputs are combined to filter low-potential candidates and shortlist 
 Step 6: Comparative Analysis & Ranking
 Shortlisted candidates are compared with existing medicines, and a ranked comparative analysis is produced to support research-level decision making.
 
-## Round 2 Vision : 
-1- Improving the accuracy of all five predictive models.
-2-Introducing an orchestrator for efficient job scheduling and batch evaluation.
-3-Adding automated report generation for research-ready outputs.
+## Failure Handling & System Reliability
+
+Pindora Shield is designed with defensive failure-handling mechanisms to prevent system crashes and ensure graceful recovery during runtime issues.
+
+- **Isolated Component Execution:**  
+  Generative models, predictive evaluators, backend APIs, and frontend rendering operate as independent modules. A failure in one component does not cascade across the entire system.
+
+- **Graceful API Degradation:**  
+  Backend endpoints validate inputs and handle unexpected responses (e.g., invalid JSON, empty outputs) without crashing the service. Errors are returned as structured responses instead of unhandled exceptions.
+
+- **Model-Level Fault Tolerance:**  
+  Each predictive model runs independently. If a single model fails or times out, the system continues evaluating other properties and flags partial results instead of terminating execution.
+
+- **Frontend Error Guarding:**  
+  The frontend includes runtime checks for non-JSON or malformed backend responses and displays informative status messages instead of breaking the UI.
+
+- **Stateless Backend Design:**  
+  APIs remain stateless, enabling safe retries, redeployment, or migration without data corruption or recovery complexity.
+
+Together, these mechanisms ensure robustness, prevent full-system crashes, and allow controlled recovery during partial failures or infrastructure instability.
+
 
 **Dataset & Inputs**
 - Public biomedical datasets (e.g., ChEMBL, Open Targets) used for disease–target and drug information
