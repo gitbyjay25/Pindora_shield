@@ -10,6 +10,7 @@ Existing computational tools for molecular generation and optimization often suf
 # Demo Video
 Check out idea overview video!
 
+[![Pindora Shield Working]](https://drive.google.com/file/d/1RD0yNYXEAOLJFaielz63YvALE1sXTR17/view?usp=drive_link)
 [![Pindora Shield Idea Overview](https://img.youtube.com/vi/qAfakXOXfcU/0.jpg)](https://www.youtube.com/watch?v=qAfakXOXfcU)
 
 ## Detailed Description
