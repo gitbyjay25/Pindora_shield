@@ -2,7 +2,7 @@ env
 .env
 __pycache__/
 catboost_info/
-Pindora.pem
+pindorav2ubuntu_key.pem
 
 # Frontend folder ignores
 frontend/logs
