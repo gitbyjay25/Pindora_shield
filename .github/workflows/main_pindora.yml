@@ -36,7 +36,14 @@ jobs:
           cp -r frontend/dist deploy/dist
           cp frontend/server.js deploy/
           cp frontend/package.json deploy/
+          cp frontend/package-lock.json deploy/ || true
           cp frontend/web.config deploy/
+      
+      - name: Install production dependencies
+        working-directory: ./deploy
+        run: |
+          npm install --omit=dev
+          npm install express
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
